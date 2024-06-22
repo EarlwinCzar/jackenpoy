@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+ </head>
+ <body> 
+
+  <div class="wrapper">
+    <div><h1>JunkenPong</h1></div>
+    <div>
+  <p><span id="gamesCountResult"></span></p>
+  <button onclick="games(3)">3 Games</button>
+  <button onclick="games(5)">5 Games</button>
+  <button onclick="games(10)">10 Games</button>
+    </div>
+
+  <div>
+  <p id="battleResult"></p>
+  <button onclick="battle('rock')">rock</button>
+  <button onclick="battle('paper')">paper</button>
+  <button onclick="battle('scissors')">scissors</button>
+  </div>
+
+  
+  <p>Computer score: <span id="computerScore"></span></p>
+  <p>Human score: <span id="humanScore"></span></p>
+  <h1><span id="gameResults"></span></h1>
+  </div>
+
+  <script src="script.js"></script>
+ </body>
+ </html>
