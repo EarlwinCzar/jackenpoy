@@ -19,16 +19,29 @@
 
   <div>
   <p id="battleResult"></p>
-  <button onclick="battle('rock')">rock</button>
-  <button onclick="battle('paper')">paper</button>
-  <button onclick="battle('scissors')">scissors</button>
+  <button class="rock" onclick="battle('rock')"></button>
+  <button class="paper" onclick="battle('paper')"></button>
+  <button class="scissors" onclick="battle('scissors')"></button>
   </div>
 
   
-  <p>Computer score: <span id="computerScore"></span></p>
-  <p>Human score: <span id="humanScore"></span></p>
+
   <h1><span id="gameResults"></span></h1>
   </div>
+
+  <div class="score-container">
+    <p>Human score: <span id="humanScore"></span></p>
+    <p>Computer score: <span id="computerScore"></span></p>
+  </div>
+
+  <!-- <div class="hand-container">
+    <div class="hand-wrapper">
+      <div class="humanHand"></div>
+      <div class="aiHand"></div>
+    </div>
+  </div> -->
+
+
 
   <script src="script.js"></script>
  </body>

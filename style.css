@@ -1,7 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Seymour+One&display=swap");
+
+* {
+  font-family: Seymour One;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
   flex-flow: column;
   align-items: center;
   text-align: center;
+}
+
+#gamesCountResult {
+  font-size: xx-large;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+@keyframes humanIdle {
+  from {
+  }
+
+  to {
+    transform: rotate(calc(10deg));
+  }
+}
+
+@keyframes aiIdle {
+  from {
+  }
+
+  to {
+    transform: rotate(calc(-10deg));
+  }
+}
+
+@keyframes handAnimation {
+  from {
+  }
+  to {
+    transform: rotate(calc(10deg));
+  }
+}
+
+.hand-wrapper {
+  width: 1980px;
+  height: 1080px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.score-container p {
+  font-size: xx-large;
+}
+
+.rock {
+  width: 230px;
+  height: 220px;
+  border: none;
+  background-color: transparent;
+  background-image: url(rockidle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.rock:hover {
+  background-image: url(rockhover.png);
+  animation: handAnimation 2s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.paper {
+  width: 230px;
+  height: 250px;
+  border: none;
+  background-color: transparent;
+  background-image: url(paperidle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.paper:hover {
+  background-image: url(paperhover.png);
+  animation: handAnimation 2s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.scissors {
+  width: 230px;
+  height: 250px;
+  border: none;
+  background-color: transparent;
+  background-image: url(sciidle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.scissors:hover {
+  background-image: url(scihover.png);
+  animation: handAnimation 2s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.humanHand,
+.aiHand {
+  width: 100%;
+}
+
+.humanHand {
+  background-image: url(humidle1.png);
+  rotate: calc(45deg);
+  animation: humanIdle 2s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 37%;
+}
+
+.aiHand {
+  background-image: url(aiidle1.png);
+  rotate: calc(-45deg);
+  animation: humanIdle 2s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.hand-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
 }

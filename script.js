@@ -40,7 +40,7 @@ const jackenpoy = () => {
     (humanChoice === "scissors" && comResult === "paper") ||
     (humanChoice === "paper" && comResult === "rock")
   ) {
-    result = "Human wins";
+    result = "You win";
     humanScore += 1;
   } else if (comResult === humanChoice) {
     result = "Same choice, do it again";
@@ -112,7 +112,7 @@ const battle = (pick) => {
       computerScore < humanScore &&
       humanScore === 2)
   ) {
-    elemGameResult.textContent = `Game result: Human wins!`;
+    elemGameResult.textContent = `Game result: You win!`;
     elemResult.textContent = `${(gameCounterResult = 0)}`;
   } else if (
     (gameCounterResult < computerScore &&
@@ -129,3 +129,5 @@ const battle = (pick) => {
     elemResult.textContent = `${(gameCounterResult = 0)}`;
   }
 };
+
+// canvas
